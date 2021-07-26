@@ -57,20 +57,6 @@ def getr(serial, device):
     item = response['Item']
     print(item)
 
-# Search by attribute (value). This can get expensive as the data grows
-#@app.route('/vsearch/<string:name>', methods=['GET', 'POST'])
-#def get_values(name):
-#    r = rcon()
-#    cursor = '0'
-#    vals = []
-#    while cursor != 0:
-#        cursor, values = r.scan(cursor=cursor)
-##        values = r.mget(*values)
-#       for val in values:
-#           if name in val:
-#                vals.append(val)
-#        return jsonify(vals)
-
 # Get a dump of all keys and values       
 @app.route('/getall')
 def getall():
