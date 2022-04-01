@@ -3,7 +3,7 @@ gm = 0
 hm = 0
 fm_list = []
 
-with open("/Users/craigvandeputte/pyscripts/addresses.csv") as add:
+with open("/Users/craigvandeputte/pyscripts/working/addresses.csv") as add:
     for x in add:
         FirstMail = x.strip().split("@")
         fm_list.append(FirstMail[0]) 
