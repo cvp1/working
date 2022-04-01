@@ -1,11 +1,7 @@
 import boto3
 import logging
 #Logs for script based execution
-#logging.basicConfig(filename = 'aws_session.log', level=logging.INFO, format = '%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
-
-# Set up AWS session
-
-
+logging.basicConfig(filename = 'aws_session.log', level=logging.INFO, format = '%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
 
 def getmail():
@@ -26,13 +22,9 @@ def getmail():
                 for x in fm_list:
                     y = x+"\n"
                     results.write(y)
-        
-
-
-
     return print(fm_list)
 
-#getmail()
+getmail()
 s3_client = boto3.client('s3')
 response = s3_client.list_buckets()
 # Output the bucket names
